@@ -199,13 +199,23 @@ p{
 }
 .article li{ margin-bottom: 8px; }
 
+.figure{
+  margin: 26px 0;
+  max-width: 560px;   /* smaller, but left-aligned */
+}
+
 .figure img{
   width: 100%;
-  max-width: 560px;  
-  margin: 0 auto;     
   display: block;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.caption{
+  margin-top: 10px;
+  color: var(--faint);
+  font-size: 13px;
+  max-width: 560px;   /* keeps caption aligned with image width */
 }
 .caption{
   margin-top: 10px;
