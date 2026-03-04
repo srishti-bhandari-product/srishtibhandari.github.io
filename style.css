@@ -307,3 +307,25 @@ p{
   .work-grid{ grid-template-columns: 1fr; }
   .timeline{ grid-template-columns: 1fr; }
 }
+/* ===== Thinking cards ===== */
+.thinking-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.pill{
+  display: inline-block;
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+@media (max-width: 900px){
+  .thinking-grid{ grid-template-columns: 1fr; }
+}
