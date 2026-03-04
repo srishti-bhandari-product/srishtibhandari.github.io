@@ -25,3 +25,18 @@
 .coverage-links a:hover {
   color: #4F46E5;
 }
+/* ===== Section Spacing ===== */
+.section {
+  margin-top: 140px;
+}
+
+.section h2 {
+  margin-bottom: 32px;
+}
+
+/* ===== Divider ===== */
+.divider {
+  height: 1px;
+  background: #E2E8F0;
+  margin: 120px 0;
+}
