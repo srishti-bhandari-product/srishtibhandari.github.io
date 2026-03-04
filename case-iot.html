@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Case Study — Ambient IoT Cold Chain Intelligence</title>
+  <title>Case Study — Turning Signals Into Decisions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,8 +22,10 @@
 <div class="container">
   <div class="article">
     <div class="kicker">Case Study</div>
-    <h1>Ambient IoT Cold Chain Intelligence</h1>
-    <p class="small">Turning ambient Bluetooth signals into trusted decisions — with validation rigor and associate trust built in.</p>
+    <h1>Turning Signals Into Decisions</h1>
+    <p class="small">
+      Building an ML and IoT decision layer that performs in the messy real world, with validation rigor and human override designed for trust and adoption.
+    </p>
 
     <div class="figure">
       <img src="images/iot-walmart-wiliot.jpg" alt="Wiliot x Walmart partnership coverage" />
@@ -32,42 +34,60 @@
 
     <h2>Context</h2>
     <p>
-      Bluetooth-enabled tagging introduced real-time temperature and location signals for cold-chain inventory movement.
-      The product challenge wasn’t tracking — it was translating noisy real-world signals into decisions teams would trust and act on.
+      Bluetooth tagging introduced real time temperature and location signals for cold chain inventory movement. The opportunity was larger than tracking.
+      It was about building a decision system that translates ambient signals into actions teams can trust and execute.
+    </p>
+    <p>
+      In physical operations, the cost of being wrong is real. A false positive can trigger unnecessary work or waste. A missed signal can create quality risk.
+      If the system is not trusted, it will be ignored.
     </p>
 
     <h2>The Challenge</h2>
     <ul>
-      <li>Real-world signal quality varies; false positives can drive costly or incorrect actions.</li>
-      <li>Decisions affect frontline workflows; adoption depends on trust and clarity.</li>
-      <li>ML-informed recommendations require validation, guardrails, and launch criteria to manage risk.</li>
-      <li>Associates can perceive sensing systems as “monitoring,” so emotional trust must be designed explicitly.</li>
+      <li>Real world signals are noisy. The model must know when it is confident and when it is not.</li>
+      <li>Recommendations change frontline workflows. Adoption depends on clarity, not just accuracy.</li>
+      <li>Safety sensitive decisions need guardrails, thresholds, and launch criteria.</li>
+      <li>Associates can interpret sensing as monitoring. Emotional trust has to be designed, not assumed.</li>
     </ul>
 
     <h2>My Role</h2>
     <p>
-      As the product lead, I drove 0→1 strategy for a signal-driven evaluation system that converted ambient IoT data into validated operational decisions.
-      I partnered with engineering, data science, and operations to align on guardrails, rollout approach, and trust-first design.
+      I led 0 to 1 product strategy for a signal driven evaluation system that converts ambient IoT data into validated operational decisions.
+      I partnered with engineering, data science, and operations to align on the decision model, rollout approach, and trust first adoption strategy.
     </p>
 
-    <h2>System Design</h2>
+    <h2>How the System Worked</h2>
+    <p>
+      The core product problem was not data collection. It was decision quality. We built around three principles: validate before you scale, protect against harm,
+      and make the system legible to humans.
+    </p>
     <ul>
-      <li><strong>Validation discipline:</strong> structured evaluation using historical + live signals to assess reliability before scaling.</li>
-      <li><strong>Guardrails:</strong> confidence thresholds and “do no harm” logic for safety-sensitive scenarios.</li>
-      <li><strong>Human-in-the-loop:</strong> explainable recommendations and override capability where judgment matters.</li>
-      <li><strong>Trust-first adoption:</strong> messaging and UX designed to avoid associate anxiety around surveillance and reinforce “assist, not monitor.”</li>
+      <li><strong>Validation discipline:</strong> evaluation using historical and live signals to measure reliability before broader rollout.</li>
+      <li><strong>Guardrails:</strong> confidence thresholds and conservative logic where the cost of being wrong is high.</li>
+      <li><strong>Human in the loop design:</strong> explainable recommendations plus override capability so operators retain agency.</li>
+    </ul>
+
+    <h2>Trust and Adoption</h2>
+    <p>
+      A hard lesson in physical systems is that accuracy alone does not ship. People ship. We treated trust as a product requirement.
+      Associates needed to feel supported, not watched.
+    </p>
+    <ul>
+      <li>Designed messaging and UX to reinforce assist, not monitor</li>
+      <li>Made recommendations explain themselves so users understand why the system is asking for action</li>
+      <li>Preserved operator agency through override and clear escalation paths</li>
     </ul>
 
     <h2>Impact</h2>
     <ul>
-      <li>Improved decision reliability and reduced disruption through validation and guardrails.</li>
+      <li>Improved decision reliability and reduced operational disruption through validation and guardrails.</li>
       <li>Enabled scalable adoption by designing for associate trust and psychological safety.</li>
-      <li>Established a reusable governance pattern for ML-informed operational decision systems.</li>
+      <li>Established a reusable pattern for responsible ML informed decision systems in physical environments.</li>
     </ul>
 
     <div class="figure">
       <img src="images/iot-tag.jpg" alt="IoT pallet tag close-up" />
-      <div class="caption">Hardware signal layer (tag-level) supporting the decision infrastructure.</div>
+      <div class="caption">Hardware signal layer (tag level) supporting the decision infrastructure.</div>
     </div>
 
     <h2>Published coverage</h2>
