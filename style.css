@@ -85,6 +85,13 @@ p{
   z-index: 20;
 }
 
+.topnav::after{
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(79,70,229,0) 0%, rgba(79,70,229,0.95) 25%, rgba(99,102,241,0.95) 50%, rgba(79,70,229,0.95) 75%, rgba(79,70,229,0) 100%);
+}
+
 .topnav-inner{
   max-width: 1100px;
   margin: 0 auto;
