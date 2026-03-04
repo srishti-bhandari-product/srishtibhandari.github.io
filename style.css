@@ -199,10 +199,11 @@ p{
 }
 .article li{ margin-bottom: 8px; }
 
-.figure{ margin: 26px 0; }
 .figure img{
   width: 100%;
-  max-width: 680px; /* images smaller */
+  max-width: 560px;  
+  margin: 0 auto;     
+  display: block;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
