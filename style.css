@@ -252,7 +252,9 @@ p{
   display: flex;
   flex-direction: column;
 }
-
+.milestone2{
+  min-height: 120px;
+}
 .node{
   position: relative;
   padding-top: 18px;
