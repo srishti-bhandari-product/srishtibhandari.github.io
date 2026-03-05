@@ -324,16 +324,71 @@ p{
   color: var(--muted);
   margin-top: 12px;
 }
-.contact-row a{ color: var(--text); }
-.contact-row a:hover{ color: var(--accent); }
+.contact-row a,
+.contact-row a:hover{
+  color: var(--accent);
+}
 
 @media (max-width: 900px){
-  h1{ font-size: 44px; }
-  .hero-grid{ grid-template-columns: 1fr; }
-  .portrait{ max-width: 240px; }
-  .work-grid{ grid-template-columns: 1fr; }
-  .timeline{ grid-template-columns: 1fr; }
+  .container{
+    padding: 56px 18px 72px;
+  }
+
+  .section{
+    padding: 64px 0;
+  }
+
+  h1{ font-size: 42px; }
+  h2{ font-size: 24px; }
+  p{ font-size: 16px; }
+
+  /* Keep image on the right (smaller) instead of stacking */
+  .hero-grid{
+    grid-template-columns: 1fr 180px;
+    gap: 18px;
+    align-items: start;
+  }
+  .portrait{
+    max-width: 180px;
+    justify-self: end;
+  }
+
+  /* Make nav less cluttered: no wrap, horizontal scroll */
+  .topnav-inner{
+    padding: 12px 18px;
+  }
+  .navlinks{
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navlinks a{
+    margin-left: 16px;
+    font-size: 15px;
+  }
+
+  /* Cards: slightly tighter */
+  .card{
+    padding: 22px;
+  }
+
+  .work-grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* Trajectory v2 already handles stacking in its own media block */
 }
+@media (max-width: 420px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+  .portrait{
+    max-width: 220px;
+    margin-top: 14px;
+    justify-self: start;
+  }
+}
+
 /* ===== Thinking cards ===== */
 .thinking-grid{
   display: grid;
