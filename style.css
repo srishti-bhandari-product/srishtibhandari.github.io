@@ -396,6 +396,10 @@ p{
   gap: 22px;
   margin-top: 22px;
 }
+/* Featured thinking card spans full width */
+.thinking-grid .card.featured{
+  grid-column: 1 / -1;
+}
 
 .pill{
   display: inline-block;
