@@ -13,7 +13,7 @@
     <div class="brand"><a href="index.html">Srishti Bhandari</a></div>
     <div class="navlinks">
       <a href="index.html#work">Work</a>
-      <a href="index.html#trajectory">Trajectory</a>
+      <a href="index.html#thinking">Ideas</a>
       <a href="index.html#contact">Contact</a>
     </div>
   </div>
@@ -23,72 +23,83 @@
   <div class="article">
     <div class="kicker">Case Study</div>
     <h1>Turning Signals Into Decisions</h1>
-    <p class="small">
-      Building an ML and IoT decision layer that performs in the messy real world, with validation rigor and human override designed for trust and adoption.
+    <p class="hero-lede">
+      Building an ML and IoT decision layer that performs in the physical world, where accuracy, trust, and adoption all matter.
     </p>
 
     <div class="figure">
       <img src="images/iot-walmart-wiliot.jpg" alt="Wiliot x Walmart partnership coverage" />
-      <div class="caption">Public partnership coverage image (Wiliot × Walmart).</div>
+      <div class="caption">Public partnership coverage image from the Wiliot and Walmart announcement.</div>
     </div>
 
-    <h2>Context</h2>
+    <h2>The problem beneath the problem</h2>
     <p>
-      Bluetooth tagging introduced real time temperature and location signals for cold chain inventory movement. The opportunity was larger than tracking.
-      It was about building a decision system that translates ambient signals into actions teams can trust and execute.
+      IoT data is easy to collect. Trusted decisions are harder.
     </p>
     <p>
-      In physical operations, the cost of being wrong is real. A false positive can trigger unnecessary work or waste. A missed signal can create quality risk.
-      If the system is not trusted, it will be ignored.
+      Bluetooth tagging introduced real-time temperature and location signals for cold chain inventory movement. But the real opportunity was not tracking. It was translating ambient signals into decisions that teams could trust, understand, and act on.
+    </p>
+    <p>
+      In physical operations, the cost of being wrong is real. A false positive creates unnecessary work. A missed signal creates quality risk. A system that is not trusted will not be used.
     </p>
 
-    <h2>The Challenge</h2>
+    <div class="article-callout">
+      <h3>The product question</h3>
+      <p>
+        How do you turn noisy real-world signals into operational decisions without overwhelming the people expected to act on them?
+      </p>
+    </div>
+
+    <h2>What made it hard</h2>
     <ul>
-      <li>Real world signals are noisy. The model must know when it is confident and when it is not.</li>
-      <li>Recommendations change frontline workflows. Adoption depends on clarity, not just accuracy.</li>
-      <li>Safety sensitive decisions need guardrails, thresholds, and launch criteria.</li>
-      <li>Associates can interpret sensing as monitoring. Emotional trust has to be designed, not assumed.</li>
+      <li><strong>Signals were imperfect.</strong> Real-world environments create noise, gaps, and edge cases.</li>
+      <li><strong>Recommendations changed workflows.</strong> Adoption depended on clarity, not just model performance.</li>
+      <li><strong>Trust was emotional as well as technical.</strong> Associates could interpret sensing as monitoring unless the experience made the purpose clear.</li>
+      <li><strong>Safety mattered.</strong> The product needed guardrails, thresholds, and override paths before scale.</li>
     </ul>
 
-    <h2>My Role</h2>
+    <h2>What I led</h2>
     <p>
-      I led 0 to 1 product strategy for a signal driven evaluation system that converts ambient IoT data into validated operational decisions.
-      I partnered with engineering, data science, and operations to align on the decision model, rollout approach, and trust first adoption strategy.
-    </p>
-
-    <h2>How the System Worked</h2>
-    <p>
-      The core product problem was not data collection. It was decision quality. We built around three principles: validate before you scale, protect against harm,
-      and make the system legible to humans.
+      I led 0 to 1 product strategy for a signal-driven evaluation system that converted ambient IoT data into validated operational decisions. The work required product, engineering, data science, and operations to move together.
     </p>
     <ul>
-      <li><strong>Validation discipline:</strong> evaluation using historical and live signals to measure reliability before broader rollout.</li>
-      <li><strong>Guardrails:</strong> confidence thresholds and conservative logic where the cost of being wrong is high.</li>
-      <li><strong>Human in the loop design:</strong> explainable recommendations plus override capability so operators retain agency.</li>
+      <li>Defined the decision model and evaluation strategy</li>
+      <li>Established guardrails for ML-informed recommendations</li>
+      <li>Designed human in the loop workflows for trust and override</li>
+      <li>Aligned rollout strategy around adoption, safety, and governance</li>
     </ul>
 
-    <h2>Trust and Adoption</h2>
-    <p>
-      A hard lesson in physical systems is that accuracy alone does not ship. People ship. We treated trust as a product requirement.
-      Associates needed to feel supported, not watched.
-    </p>
-    <ul>
-      <li>Designed messaging and UX to reinforce assist, not monitor</li>
-      <li>Made recommendations explain themselves so users understand why the system is asking for action</li>
-      <li>Preserved operator agency through override and clear escalation paths</li>
-    </ul>
+    <h2>The decisions that mattered</h2>
 
-    <h2>Impact</h2>
+    <h3>Validate before scaling</h3>
+    <p>
+      The system needed to prove reliability before influencing operational decisions broadly. Validation was treated as a product requirement, not a technical afterthought.
+    </p>
+
+    <h3>Design for confidence, not blind automation</h3>
+    <p>
+      Recommendations needed to explain themselves. When the system asked someone to act, it had to show enough context for the action to feel reasonable.
+    </p>
+
+    <h3>Protect associate trust</h3>
+    <p>
+      The experience had to reinforce that the system was there to assist, not monitor. That meant thinking carefully about language, visibility, override, and escalation.
+    </p>
+
+    <h2>What changed</h2>
     <ul>
-      <li>Improved decision reliability and reduced operational disruption through validation and guardrails.</li>
-      <li>Enabled scalable adoption by designing for associate trust and psychological safety.</li>
-      <li>Established a reusable pattern for responsible ML informed decision systems in physical environments.</li>
+      <li><strong>Before:</strong> signals existed, but decisions still depended on manual interpretation.</li>
+      <li><strong>After:</strong> signals were translated into validated recommendations with guardrails.</li>
+      <li><strong>Before:</strong> automation risked feeling opaque.</li>
+      <li><strong>After:</strong> human judgment stayed part of the system.</li>
+      <li><strong>Before:</strong> adoption depended on trust forming informally.</li>
+      <li><strong>After:</strong> trust was designed into the experience.</li>
     </ul>
 
     <h2>Published coverage</h2>
     <ul>
-      <li><a href="https://www.wiliot.com/wiliot-collaborates-with-walmart-to-transform-retail-supply-chain-with-ambient-iot-and-ai#news-content" target="_blank">Wiliot × Walmart announcement ↗</a></li>
-      <li><a href="https://www.cnbc.com/2025/10/15/walmart-deploying-millions-of-internet-iot-sensors-across-us.html" target="_blank">CNBC coverage ↗</a></li>
+      <li><a class="accent-link" href="https://www.wiliot.com/wiliot-collaborates-with-walmart-to-transform-retail-supply-chain-with-ambient-iot-and-ai#news-content" target="_blank">Wiliot × Walmart announcement ↗</a></li>
+      <li><a class="accent-link" href="https://www.cnbc.com/2025/10/15/walmart-deploying-millions-of-internet-iot-sensors-across-us.html" target="_blank">CNBC coverage ↗</a></li>
     </ul>
 
     <div style="margin-top: 34px;">
