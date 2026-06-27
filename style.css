@@ -1036,3 +1036,109 @@ a {
     font-size: 13px;
   }
 }
+/* =========================
+   Portrait V2: editorial photo + word halo
+   ========================= */
+
+.portrait-svg-shell{
+  display: none;
+}
+
+.portrait-editorial{
+  position: sticky;
+  top: 126px;
+  margin-top: 112px;
+  min-height: 535px;
+  border-radius: 999px 999px 42px 42px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(255, 250, 243, 0.95), transparent 18rem),
+    linear-gradient(160deg, rgba(239, 228, 214, 0.9), rgba(255, 250, 243, 0.58));
+}
+
+.portrait-editorial::before{
+  content: "";
+  position: absolute;
+  inset: 40px 18px 46px;
+  border-radius: 999px 999px 34px 34px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(164, 111, 61, 0.12), transparent 16rem);
+  z-index: 1;
+}
+
+.portrait-editorial::after{
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 34%;
+  background: linear-gradient(to top, var(--cream) 10%, rgba(247, 241, 232, 0));
+  z-index: 5;
+  pointer-events: none;
+}
+
+.portrait-editorial-img{
+  position: absolute;
+  inset: 34px 8px 0 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 8px);
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.96) contrast(1.02);
+  z-index: 3;
+}
+
+.portrait-orbit{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.portrait-orbit .word{
+  position: absolute;
+  font-family: var(--sans);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  color: rgba(125, 79, 41, 0.28);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.portrait-orbit .w1{ left: 8%; top: 12%; font-size: 15px; transform: rotate(-8deg); }
+.portrait-orbit .w2{ left: 63%; top: 10%; font-size: 18px; transform: rotate(7deg); }
+.portrait-orbit .w3{ left: 4%; top: 28%; font-size: 13px; transform: rotate(8deg); }
+.portrait-orbit .w4{ left: 78%; top: 29%; font-size: 22px; transform: rotate(-7deg); }
+.portrait-orbit .w5{ left: 3%; top: 48%; font-size: 16px; transform: rotate(-6deg); }
+.portrait-orbit .w6{ left: 78%; top: 49%; font-size: 18px; transform: rotate(7deg); }
+.portrait-orbit .w7{ left: 8%; top: 67%; font-size: 13px; transform: rotate(5deg); }
+.portrait-orbit .w8{ left: 76%; top: 69%; font-size: 17px; transform: rotate(-8deg); }
+.portrait-orbit .w9{ left: 15%; top: 84%; font-size: 13px; transform: rotate(-5deg); }
+.portrait-orbit .w10{ left: 63%; top: 84%; font-size: 18px; transform: rotate(6deg); }
+.portrait-orbit .w11{ left: 46%; top: 6%; font-size: 12px; transform: rotate(-4deg); }
+.portrait-orbit .w12{ left: 39%; top: 91%; font-size: 13px; transform: rotate(4deg); }
+
+@media (max-width: 780px){
+  .portrait-editorial{
+    position: relative;
+    top: auto;
+    margin-top: 28px;
+    min-height: 250px;
+    border-radius: 999px 999px 26px 26px;
+  }
+
+  .portrait-editorial-img{
+    inset: 20px 4px 0 4px;
+    width: calc(100% - 8px);
+  }
+
+  .portrait-orbit .word{
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 460px){
+  .portrait-editorial{
+    width: min(260px, 74vw);
+  }
+}
