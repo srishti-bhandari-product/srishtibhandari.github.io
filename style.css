@@ -2285,3 +2285,22 @@ a {
     width: 126%;
   }
 }
+/* Tighten contact-to-footer spacing */
+.contact-section{
+  padding-bottom: 44px;
+}
+
+.site-footer{
+  padding-top: 22px;
+  border-top: 0;
+}
+
+.footer-main{
+  display: none;
+}
+
+.footer-meta{
+  margin-top: 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(36, 30, 24, 0.08);
+}
