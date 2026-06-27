@@ -2138,3 +2138,32 @@ a {
     min-height: 360px;
   }
 }
+/* Softer compliance text */
+.footer-meta{
+  margin-top: 46px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(36, 30, 24, 0.06);
+  max-width: 980px;
+}
+
+.footer-meta p{
+  color: rgba(98, 91, 82, 0.48);
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+.footer-meta p:first-child{
+  color: rgba(98, 91, 82, 0.58);
+}
+
+@media (max-width: 780px){
+  .footer-meta{
+    margin-top: 36px;
+  }
+
+  .footer-meta p{
+    font-size: 10.5px;
+  }
+}
