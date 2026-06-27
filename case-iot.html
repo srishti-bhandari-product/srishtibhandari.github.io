@@ -1,112 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Case Study — Turning Signals Into Decisions</title>
+  <title>Turning Signals Into Decisions — Srishti Bhandari</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div class="topnav">
-  <div class="topnav-inner">
-    <div class="brand"><a href="index.html">Srishti Bhandari</a></div>
-    <div class="navlinks">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#thinking">Ideas</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </div>
-</div>
+<header class="site-header">
+  <a class="site-mark" href="index.html">Srishti Bhandari</a>
 
-<div class="container">
-  <div class="article">
-    <div class="kicker">Case Study</div>
-    <h1>Turning Signals Into Decisions</h1>
-    <p class="hero-lede">
-      Building an ML and IoT decision layer that performs in the physical world, where accuracy, trust, and adoption all matter.
-    </p>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#thinking">Thinking</a>
+    <a href="index.html#mentorship">Mentorship</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
 
-    <div class="figure">
-      <img src="images/iot-walmart-wiliot.jpg" alt="Wiliot x Walmart partnership coverage" />
-      <div class="caption">Public partnership coverage image from the Wiliot and Walmart announcement.</div>
-    </div>
+<main>
+  <section class="container">
+    <article class="article">
+      <p class="kicker">Case Study</p>
 
-    <h2>The problem beneath the problem</h2>
-    <p>
-      IoT data is easy to collect. Trusted decisions are harder.
-    </p>
-    <p>
-      Bluetooth tagging introduced real-time temperature and location signals for cold chain inventory movement. But the real opportunity was not tracking. It was translating ambient signals into decisions that teams could trust, understand, and act on.
-    </p>
-    <p>
-      In physical operations, the cost of being wrong is real. A false positive creates unnecessary work. A missed signal creates quality risk. A system that is not trusted will not be used.
-    </p>
+      <h1>Turning Signals Into Decisions</h1>
 
-    <div class="article-callout">
-      <h3>The product question</h3>
-      <p>
-        How do you turn noisy real-world signals into operational decisions without overwhelming the people expected to act on them?
+      <p class="hero-lede">
+        Building an ML and IoT decision layer that works in the physical world, where accuracy, trust, and adoption all matter.
       </p>
-    </div>
 
-    <h2>What made it hard</h2>
-    <ul>
-      <li><strong>Signals were imperfect.</strong> Real-world environments create noise, gaps, and edge cases.</li>
-      <li><strong>Recommendations changed workflows.</strong> Adoption depended on clarity, not just model performance.</li>
-      <li><strong>Trust was emotional as well as technical.</strong> Associates could interpret sensing as monitoring unless the experience made the purpose clear.</li>
-      <li><strong>Safety mattered.</strong> The product needed guardrails, thresholds, and override paths before scale.</li>
-    </ul>
+      <div class="figure">
+        <img src="images/iot-walmart-wiliot.jpg" alt="Wiliot and Walmart partnership coverage" />
+        <div class="caption">The interesting work was not sensing. It was turning signals into decisions people could trust.</div>
+      </div>
 
-    <h2>What I led</h2>
-    <p>
-      I led 0 to 1 product strategy for a signal-driven evaluation system that converted ambient IoT data into validated operational decisions. The work required product, engineering, data science, and operations to move together.
-    </p>
-    <ul>
-      <li>Defined the decision model and evaluation strategy</li>
-      <li>Established guardrails for ML-informed recommendations</li>
-      <li>Designed human in the loop workflows for trust and override</li>
-      <li>Aligned rollout strategy around adoption, safety, and governance</li>
-    </ul>
+      <h2>The problem beneath the problem</h2>
+      <p>
+        IoT data is easy to collect. Trusted decisions are harder.
+      </p>
 
-    <h2>The decisions that mattered</h2>
+      <p>
+        Bluetooth tagging introduced real-time temperature and location signals for cold chain inventory movement. But the real opportunity was not tracking. It was translating ambient signals into decisions that teams could understand, trust, and act on.
+      </p>
 
-    <h3>Validate before scaling</h3>
-    <p>
-      The system needed to prove reliability before influencing operational decisions broadly. Validation was treated as a product requirement, not a technical afterthought.
-    </p>
+      <p>
+        In physical operations, the cost of being wrong is real. A false positive creates unnecessary work. A missed signal creates quality risk. A system that is not trusted will not be used.
+      </p>
 
-    <h3>Design for confidence, not blind automation</h3>
-    <p>
-      Recommendations needed to explain themselves. When the system asked someone to act, it had to show enough context for the action to feel reasonable.
-    </p>
+      <div class="article-callout">
+        <h3>The product challenge</h3>
+        <p>
+          Turn noisy real-world signals into operational decisions without overwhelming the people expected to act on them.
+        </p>
+      </div>
 
-    <h3>Protect associate trust</h3>
-    <p>
-      The experience had to reinforce that the system was there to assist, not monitor. That meant thinking carefully about language, visibility, override, and escalation.
-    </p>
+      <h2>What made it hard</h2>
+      <ul>
+        <li><strong>Signals were imperfect.</strong> Real-world environments create noise, gaps, and edge cases.</li>
+        <li><strong>Recommendations changed workflows.</strong> Adoption depended on clarity, not just model performance.</li>
+        <li><strong>Trust was emotional as well as technical.</strong> Associates could interpret sensing as monitoring unless the experience made the purpose clear.</li>
+        <li><strong>Safety mattered.</strong> The product needed guardrails, thresholds, and override paths before scale.</li>
+      </ul>
 
-    <h2>What changed</h2>
-    <ul>
-      <li><strong>Before:</strong> signals existed, but decisions still depended on manual interpretation.</li>
-      <li><strong>After:</strong> signals were translated into validated recommendations with guardrails.</li>
-      <li><strong>Before:</strong> automation risked feeling opaque.</li>
-      <li><strong>After:</strong> human judgment stayed part of the system.</li>
-      <li><strong>Before:</strong> adoption depended on trust forming informally.</li>
-      <li><strong>After:</strong> trust was designed into the experience.</li>
-    </ul>
+      <h2>What I led</h2>
+      <p>
+        I led 0 to 1 product strategy for a signal-driven evaluation system that converted ambient IoT data into validated operational decisions.
+      </p>
 
-    <h2>Published coverage</h2>
-    <ul>
-      <li><a class="accent-link" href="https://www.wiliot.com/wiliot-collaborates-with-walmart-to-transform-retail-supply-chain-with-ambient-iot-and-ai#news-content" target="_blank">Wiliot × Walmart announcement ↗</a></li>
-      <li><a class="accent-link" href="https://www.cnbc.com/2025/10/15/walmart-deploying-millions-of-internet-iot-sensors-across-us.html" target="_blank">CNBC coverage ↗</a></li>
-    </ul>
+      <p>
+        The work required product, engineering, data science, and operations to move together. The product had to be accurate enough to matter, explainable enough to be trusted, and flexible enough to survive the realities of physical operations.
+      </p>
 
-    <div style="margin-top: 34px;">
-      <a class="btn-secondary" href="index.html#work">← Back to Work</a>
-    </div>
-  </div>
-</div>
+      <ul>
+        <li>Defined the decision model and evaluation strategy.</li>
+        <li>Established guardrails for ML-informed recommendations.</li>
+        <li>Designed human-in-the-loop workflows for trust and override.</li>
+        <li>Aligned rollout strategy around adoption, safety, and governance.</li>
+      </ul>
+
+      <h2>The decisions that mattered</h2>
+
+      <h3>Validate before scaling</h3>
+      <p>
+        The system needed to prove reliability before influencing operational decisions broadly. Validation was treated as a product requirement, not a technical afterthought.
+      </p>
+
+      <h3>Design for confidence, not blind automation</h3>
+      <p>
+        Recommendations needed to explain themselves. When the system asked someone to act, it had to show enough context for the action to feel reasonable.
+      </p>
+
+      <h3>Protect associate trust</h3>
+      <p>
+        The experience had to reinforce that the system was there to assist, not monitor. That meant thinking carefully about language, visibility, override, and escalation.
+      </p>
+
+      <h2>What changed</h2>
+      <p>
+        Signals moved closer to decisions. Instead of requiring manual interpretation, the system translated data into validated recommendations with guardrails.
+      </p>
+
+      <p>
+        Automation stayed human-aware. The product did not ask people to blindly trust a black box. It kept human judgment in the loop and treated trust as part of the product experience.
+      </p>
+
+      <h2>Published coverage</h2>
+      <ul>
+        <li><a class="accent-link" href="https://www.wiliot.com/wiliot-collaborates-with-walmart-to-transform-retail-supply-chain-with-ambient-iot-and-ai#news-content" target="_blank" rel="noopener">Wiliot × Walmart announcement ↗</a></li>
+        <li><a class="accent-link" href="https://www.cnbc.com/2025/10/15/walmart-deploying-millions-of-internet-iot-sensors-across-us.html" target="_blank" rel="noopener">CNBC coverage ↗</a></li>
+      </ul>
+
+      <div style="margin-top: 42px;">
+        <a class="btn-secondary" href="index.html#work">← Back to Selected Work</a>
+      </div>
+    </article>
+  </section>
+</main>
 
 </body>
 </html>
