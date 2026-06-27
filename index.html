@@ -72,22 +72,65 @@
       </div>
     </div>
 
-    <div class="portrait-wrap" aria-label="Portrait of Srishti Bhandari">
-      <div class="portrait-words" aria-hidden="true">
-        <span style="--x:5%; --y:8%; --r:-8deg;">customer</span>
-        <span style="--x:54%; --y:4%; --r:8deg;">trust</span>
-        <span style="--x:18%; --y:21%; --r:6deg;">growth</span>
-        <span style="--x:72%; --y:21%; --r:-7deg;">AI</span>
-        <span style="--x:8%; --y:39%; --r:7deg;">analytics</span>
-        <span style="--x:68%; --y:42%; --r:-5deg;">alignment</span>
-        <span style="--x:18%; --y:61%; --r:-6deg;">KPI</span>
-        <span style="--x:59%; --y:64%; --r:8deg;">signal</span>
-        <span style="--x:7%; --y:80%; --r:5deg;">roadmap</span>
-        <span style="--x:53%; --y:83%; --r:-8deg;">clarity</span>
-      </div>
+   <div class="portrait-svg-shell" aria-label="Typographic portrait of Srishti Bhandari">
+  <img src="images/yourphoto.jpg" alt="Srishti Bhandari" class="portrait-svg-photo" />
 
-      <img src="images/yourphoto.jpg" alt="Srishti Bhandari" class="portrait" />
-    </div>
+  <svg class="word-portrait-svg" viewBox="0 0 400 540" role="img" aria-label="Product words forming a portrait">
+    <defs>
+      <clipPath id="portraitShape">
+        <ellipse cx="200" cy="205" rx="122" ry="150"></ellipse>
+        <path d="M90 530 C96 420 126 354 200 354 C274 354 304 420 310 530 Z"></path>
+      </clipPath>
+    </defs>
+
+    <g clip-path="url(#portraitShape)">
+      <text x="92" y="56" class="small" transform="rotate(-8 92 56)">customer</text>
+      <text x="176" y="62" class="medium dark" transform="rotate(6 176 62)">trust</text>
+      <text x="235" y="72" class="small soft" transform="rotate(-7 235 72)">retention</text>
+
+      <text x="72" y="92" class="large" transform="rotate(5 72 92)">growth</text>
+      <text x="164" y="102" class="small soft">engagement</text>
+      <text x="262" y="105" class="medium dark" transform="rotate(-6 262 105)">AI</text>
+
+      <text x="86" y="134" class="medium dark" transform="rotate(-5 86 134)">analytics</text>
+      <text x="190" y="136" class="small">KPI</text>
+      <text x="232" y="142" class="small soft" transform="rotate(7 232 142)">alignment</text>
+
+      <text x="74" y="174" class="small soft">platform</text>
+      <text x="150" y="178" class="large" transform="rotate(-4 150 178)">decision</text>
+      <text x="256" y="182" class="small dark">systems</text>
+
+      <text x="88" y="216" class="medium" transform="rotate(7 88 216)">signal</text>
+      <text x="166" y="220" class="small soft">ground truth</text>
+      <text x="268" y="218" class="medium dark" transform="rotate(-8 268 218)">ML</text>
+
+      <text x="70" y="258" class="small dark">experimentation</text>
+      <text x="206" y="262" class="medium" transform="rotate(5 206 262)">clarity</text>
+      <text x="276" y="266" class="tiny soft">A/B testing</text>
+
+      <text x="82" y="302" class="medium soft" transform="rotate(-8 82 302)">guardrails</text>
+      <text x="184" y="306" class="large dark">UX</text>
+      <text x="232" y="306" class="small">feedback</text>
+
+      <text x="70" y="346" class="small">human in the loop</text>
+      <text x="224" y="350" class="medium dark" transform="rotate(7 224 350)">IoT</text>
+
+      <text x="104" y="390" class="large" transform="rotate(-5 104 390)">roadmap</text>
+      <text x="214" y="394" class="small soft">ownership</text>
+
+      <text x="84" y="434" class="medium dark">strategy</text>
+      <text x="174" y="438" class="small">search</text>
+      <text x="230" y="438" class="medium soft" transform="rotate(-6 230 438)">ranking</text>
+
+      <text x="96" y="478" class="small soft">mentorship</text>
+      <text x="196" y="482" class="large" transform="rotate(5 196 482)">confidence</text>
+
+      <text x="118" y="520" class="medium dark">career</text>
+      <text x="190" y="520" class="small soft">resume</text>
+      <text x="252" y="520" class="small">scale</text>
+    </g>
+  </svg>
+</div>
   </section>
 
   <!-- SELECTED WORK -->
@@ -229,19 +272,21 @@
     <h2>Entertainment Zone.</h2>
   </div>
 
-  <div class="feature-card">
-    <p>
-      I’m building Watchr, an entertainment discovery app for people who spend more time deciding what to watch than actually watching.
-    </p>
+ <div class="feature-card">
+  <p>
+    I’m building Watchr, a small entertainment discovery app for people who spend more time deciding what to watch than actually watching.
+  </p>
 
-    <p>
-      It is still a work in progress, but the idea is simple: make the next watch feel easier to choose.
-    </p>
+  <p>
+    It is still a work in progress, but the idea is simple: make the next watch feel easier to choose.
+  </p>
 
-    <p>
-      I’ll share the mockups, product thinking, and build notes here as it takes shape.
-    </p>
-  </div>
+  <p>
+    I’ll share the mockups, product thinking, and build notes here as it takes shape.
+  </p>
+
+  <a href="watchr.html" class="text-link">See the WIP <span>→</span></a>
+</div>
 </section>
 
   <!-- MENTORSHIP -->
