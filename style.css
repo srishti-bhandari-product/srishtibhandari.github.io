@@ -2167,3 +2167,121 @@ a {
     font-size: 10.5px;
   }
 }
+/* =========================
+   Hero portrait blend fix
+   Makes portrait asset feel integrated, not pasted
+   ========================= */
+
+.portrait-art{
+  display: block !important;
+  position: sticky;
+  top: 112px;
+  margin-top: 10px;
+  min-height: 680px;
+  overflow: visible;
+  isolation: isolate;
+  background: transparent;
+}
+
+/* Soft cream glow behind image */
+.portrait-art::before{
+  content: "";
+  position: absolute;
+  inset: 34px -40px 20px -40px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 250, 243, 0.96) 0%, rgba(247, 241, 232, 0.72) 45%, rgba(247, 241, 232, 0) 76%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Bottom fade into page */
+.portrait-art::after{
+  content: "";
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  bottom: 0;
+  height: 34%;
+  background: linear-gradient(
+    to top,
+    var(--cream) 0%,
+    rgba(247, 241, 232, 0.92) 24%,
+    rgba(247, 241, 232, 0.45) 58%,
+    rgba(247, 241, 232, 0) 100%
+  );
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Crop into the poster so it feels like artwork, not a full image card */
+.portrait-art-img{
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 128%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  mix-blend-mode: multiply;
+  opacity: 0.94;
+
+  /* soft edge mask so no rectangle shows */
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse at center,
+      black 0%,
+      black 58%,
+      rgba(0,0,0,0.82) 70%,
+      rgba(0,0,0,0.28) 86%,
+      transparent 100%
+    );
+  mask-image:
+    radial-gradient(
+      ellipse at center,
+      black 0%,
+      black 58%,
+      rgba(0,0,0,0.82) 70%,
+      rgba(0,0,0,0.28) 86%,
+      transparent 100%
+    );
+}
+
+/* Hide any older portrait experiments */
+.portrait-editorial,
+.portrait-word-art,
+.portrait-svg-shell,
+.portrait-asset,
+.portrait-mockup,
+.mock-wordfield,
+.word-cloud,
+.word-portrait-svg,
+.portrait-language-svg{
+  display: none !important;
+}
+
+@media (max-width: 780px){
+  .portrait-art{
+    position: relative;
+    top: auto;
+    margin-top: 28px;
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .portrait-art-img{
+    width: 118%;
+    object-position: center top;
+  }
+}
+
+@media (max-width: 460px){
+  .portrait-art{
+    min-height: 420px;
+  }
+
+  .portrait-art-img{
+    width: 126%;
+  }
+}
