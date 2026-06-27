@@ -678,3 +678,50 @@ a {
     flex-direction: column;
   }
 }
+/* V4 polish fixes */
+
+/* Hide the early word layer over portrait until we build the real SVG version */
+.portrait-words{
+  display: none;
+}
+
+/* Make stacked name easier to read */
+.name-lockup{
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.84;
+}
+
+.name-lockup span:nth-child(2){
+  color: var(--bronze);
+}
+
+/* Slightly improve hero image integration */
+.portrait-wrap{
+  margin-top: 110px;
+}
+
+/* Optional: give bookshelf room for the extra card */
+.bookshelf{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1040px){
+  .bookshelf{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 780px){
+  .bookshelf{
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-wrap{
+    margin-top: 28px;
+  }
+
+  .name-lockup{
+    letter-spacing: -0.045em;
+  }
+}
