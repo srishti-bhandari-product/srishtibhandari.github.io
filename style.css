@@ -1716,3 +1716,25 @@ a {
     min-height: auto;
   }
 }
+/* =========================
+   Work cards: lighter, quieter, equal treatment
+   ========================= */
+
+.work-panel,
+.work-panel:hover{
+  background: rgba(255, 250, 243, 0.46) !important;
+  box-shadow: none;
+}
+
+.work-panel:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 48px rgba(44, 33, 24, 0.07);
+}
+
+.work-panel::before{
+  color: rgba(164, 111, 61, 0.11);
+}
+
+.work-panel .meta{
+  color: rgba(64, 58, 50, 0.78);
+}
