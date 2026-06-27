@@ -1303,3 +1303,140 @@ a {
     width: min(270px, 76vw);
   }
 }
+/* =========================
+   Portrait V4: designed SVG language asset
+   ========================= */
+
+.portrait-editorial,
+.portrait-word-art,
+.portrait-svg-shell,
+.word-cloud,
+.word-portrait-svg{
+  display: none !important;
+}
+
+.portrait-asset{
+  position: sticky;
+  top: 126px;
+  margin-top: 104px;
+  min-height: 550px;
+  border-radius: 999px 999px 42px 42px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(255, 250, 243, 0.96), transparent 17rem),
+    linear-gradient(160deg, rgba(239, 228, 214, 0.92), rgba(255, 250, 243, 0.6));
+}
+
+.portrait-asset::after{
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 35%;
+  background: linear-gradient(to top, var(--cream) 10%, rgba(247, 241, 232, 0));
+  z-index: 8;
+  pointer-events: none;
+}
+
+.portrait-language-svg{
+  position: absolute;
+  inset: 18px 0 8px 0;
+  width: 100%;
+  height: calc(100% - 26px);
+  z-index: 2;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+}
+
+.portrait-language-svg .word{
+  font-family: var(--sans);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  fill: rgba(83, 61, 45, 0.44);
+  dominant-baseline: middle;
+}
+
+.portrait-language-svg .tiny{
+  font-size: 10px;
+  fill: rgba(125, 79, 41, 0.30);
+}
+
+.portrait-language-svg .small{
+  font-size: 14px;
+  fill: rgba(125, 79, 41, 0.34);
+}
+
+.portrait-language-svg .medium{
+  font-size: 22px;
+  fill: rgba(72, 55, 42, 0.38);
+}
+
+.portrait-language-svg .large{
+  font-size: 34px;
+  fill: rgba(45, 34, 27, 0.42);
+}
+
+.portrait-language-svg .rotate-left{
+  transform: rotate(-6deg);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.portrait-language-svg .rotate-right{
+  transform: rotate(6deg);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.portrait-asset-photo{
+  position: absolute;
+  inset: 38px 9px 0 9px;
+  width: calc(100% - 18px);
+  height: calc(100% - 8px);
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.96) contrast(1.02);
+  z-index: 5;
+}
+
+/* keep face clean; make the product language feel like atmosphere */
+.portrait-asset-photo{
+  opacity: 0.93;
+}
+
+@media (max-width: 780px){
+  .portrait-asset{
+    position: relative;
+    top: auto;
+    margin-top: 28px;
+    min-height: 250px;
+    border-radius: 999px 999px 26px 26px;
+  }
+
+  .portrait-asset-photo{
+    inset: 20px 4px 0 4px;
+    width: calc(100% - 8px);
+  }
+
+  .portrait-language-svg .tiny{
+    font-size: 7px;
+  }
+
+  .portrait-language-svg .small{
+    font-size: 9px;
+  }
+
+  .portrait-language-svg .medium{
+    font-size: 12px;
+  }
+
+  .portrait-language-svg .large{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 460px){
+  .portrait-asset{
+    width: min(270px, 76vw);
+  }
+}
