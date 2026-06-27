@@ -2304,3 +2304,114 @@ a {
   padding-top: 22px;
   border-top: 1px solid rgba(36, 30, 24, 0.08);
 }
+/* =========================
+   Hero portrait: integrated editorial asset
+   ========================= */
+
+.portrait-art{
+  display: block !important;
+  position: sticky;
+  top: 112px;
+  margin-top: 10px;
+  min-height: 690px;
+  overflow: visible;
+  isolation: isolate;
+  background: transparent;
+}
+
+/* Cream wash behind the art so the rectangular image edge disappears */
+.portrait-art::before{
+  content: "";
+  position: absolute;
+  inset: -30px -90px -20px -90px;
+  background:
+    radial-gradient(
+      ellipse at 52% 38%,
+      rgba(255,250,243,0.98) 0%,
+      rgba(247,241,232,0.82) 46%,
+      rgba(247,241,232,0.35) 68%,
+      rgba(247,241,232,0) 86%
+    );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Softer lower fade, not a heavy white block */
+.portrait-art::after{
+  content: "";
+  position: absolute;
+  left: -80px;
+  right: -80px;
+  bottom: 0;
+  height: 26%;
+  background: linear-gradient(
+    to top,
+    var(--cream) 0%,
+    rgba(247,241,232,0.68) 38%,
+    rgba(247,241,232,0.18) 72%,
+    rgba(247,241,232,0) 100%
+  );
+  z-index: 4;
+  pointer-events: none;
+}
+
+.portrait-art-img{
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: -26px;
+  transform: translateX(-50%);
+  width: 154%;
+  height: 760px;
+  object-fit: cover;
+  object-position: center 8%;
+  mix-blend-mode: multiply;
+  opacity: 0.95;
+
+  /* This removes the hard rectangular edges */
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 62% 70% at 50% 43%,
+      black 0%,
+      black 52%,
+      rgba(0,0,0,0.74) 66%,
+      rgba(0,0,0,0.30) 82%,
+      transparent 100%
+    );
+  mask-image:
+    radial-gradient(
+      ellipse 62% 70% at 50% 43%,
+      black 0%,
+      black 52%,
+      rgba(0,0,0,0.74) 66%,
+      rgba(0,0,0,0.30) 82%,
+      transparent 100%
+    );
+}
+
+@media (max-width: 780px){
+  .portrait-art{
+    position: relative;
+    top: auto;
+    margin-top: 28px;
+    min-height: 520px;
+    overflow: hidden;
+  }
+
+  .portrait-art-img{
+    top: -10px;
+    width: 142%;
+    height: 560px;
+  }
+}
+
+@media (max-width: 460px){
+  .portrait-art{
+    min-height: 430px;
+  }
+
+  .portrait-art-img{
+    width: 152%;
+    height: 470px;
+  }
+}
