@@ -2664,3 +2664,125 @@ a {
     margin-bottom: 20px;
   }
 }
+/* Hero portrait: transparent cutout */
+.portrait-art,
+.portrait-editorial,
+.portrait-word-art,
+.portrait-svg-shell,
+.portrait-asset,
+.portrait-mockup,
+.mock-wordfield,
+.word-cloud,
+.word-portrait-svg,
+.portrait-language-svg{
+  display: none !important;
+}
+
+.portrait-cutout-wrap{
+  display: block !important;
+  position: sticky;
+  top: 116px;
+  margin-top: 58px;
+  min-height: 640px;
+  overflow: visible;
+  isolation: isolate;
+  background: transparent;
+}
+
+.portrait-cutout-wrap::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translateX(-50%);
+  width: 118%;
+  height: 72%;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(164, 111, 61, 0.18) 0%,
+      rgba(239, 228, 214, 0.42) 38%,
+      rgba(247, 241, 232, 0.10) 68%,
+      rgba(247, 241, 232, 0) 100%
+    );
+  filter: blur(2px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portrait-cutout-wrap::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 22%;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(44, 33, 24, 0.14) 0%,
+      rgba(44, 33, 24, 0.06) 42%,
+      rgba(44, 33, 24, 0) 72%
+    );
+  filter: blur(18px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portrait-cutout{
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(118%, 520px);
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter:
+    saturate(0.96)
+    contrast(1.02)
+    drop-shadow(0 28px 42px rgba(44, 33, 24, 0.10));
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      black 78%,
+      rgba(0,0,0,0.72) 88%,
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      black 78%,
+      rgba(0,0,0,0.72) 88%,
+      transparent 100%
+    );
+}
+
+@media (max-width: 780px){
+  .portrait-cutout-wrap{
+    position: relative;
+    top: auto;
+    margin-top: 28px;
+    min-height: 360px;
+  }
+
+  .portrait-cutout{
+    width: min(92vw, 360px);
+  }
+}
+
+@media (max-width: 460px){
+  .portrait-cutout-wrap{
+    min-height: 315px;
+  }
+
+  .portrait-cutout{
+    width: min(88vw, 310px);
+  }
+}
