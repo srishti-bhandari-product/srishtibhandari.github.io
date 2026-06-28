@@ -1463,3 +1463,34 @@ img{
 .topnav .navlinks a:hover{
   color: var(--bronze-dark);
 }
+/* Clean multi-point timeline item */
+.timeline-points{
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-points p{
+  margin: 0;
+}
+
+.timeline-points strong{
+  display: block;
+  color: var(--charcoal);
+  font-size: 14px;
+  font-weight: 850;
+  margin-bottom: 4px;
+}
+
+.timeline-current{
+  border-top-color: rgba(176, 122, 67, 0.70);
+}
+
+@media (max-width: 1080px){
+  .timeline-current{
+    align-items: start;
+  }
+
+  .timeline-points{
+    gap: 10px;
+  }
+}
