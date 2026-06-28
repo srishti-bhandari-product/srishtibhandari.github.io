@@ -1494,3 +1494,22 @@ img {
     grid-template-columns: 1fr;
   }
 }
+html{
+  scroll-padding-top: 120px;
+}
+
+#papers .split-left{
+  position: static;
+}
+
+#papers .split-section{
+  align-items: start;
+}
+
+#papers .split-right{
+  padding-top: 12px;
+}
+
+#papers{
+  scroll-margin-top: 120px;
+}
