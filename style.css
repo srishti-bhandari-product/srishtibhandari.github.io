@@ -1378,3 +1378,121 @@ img {
   color: #00a3e0;
   font-weight: 800;
 }
+.hero-bio{
+  max-width: 820px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.company-walmart{
+  color: #0071ce;
+  font-weight: 800;
+}
+
+.company-accenture{
+  color: #7b3fe4;
+  font-weight: 800;
+}
+
+.company-att{
+  color: #00a3e0;
+  font-weight: 800;
+}
+.split-section{
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.split-left{
+  position: sticky;
+  top: 110px;
+}
+
+.section-index{
+  color: rgba(176, 122, 67, 0.72);
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.split-left h2{
+  max-width: 10ch;
+  margin-top: 14px;
+}
+
+@media (max-width: 780px){
+  .split-section{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .split-left{
+    position: static;
+  }
+
+  .split-left h2{
+    max-width: 100%;
+  }
+}
+.section-note{
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+  margin-top: 16px;
+  max-width: 28ch;
+}
+.shelf-stack{
+  display: grid;
+  gap: 12px;
+}
+
+.shelf-row{
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 250, 243, 0.60);
+  padding: 18px 22px;
+  transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.shelf-row:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  background: rgba(255, 250, 243, 0.86);
+}
+
+.shelf-row summary{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.shelf-row summary::-webkit-details-marker{
+  display: none;
+}
+
+.shelf-row p{
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.shelf-tag{
+  flex: 0 0 auto;
+  color: var(--bronze-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 850;
+}
