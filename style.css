@@ -2786,3 +2786,46 @@ a {
     width: min(88vw, 310px);
   }
 }
+.section-intro.split{
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.section-mark{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-index{
+  color: rgba(164, 111, 61, 0.72);
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+
+.section-intro.split h2{
+  max-width: 720px;
+  margin-top: 0;
+}
+
+.section-intro.split p{
+  max-width: 64ch;
+}
+
+.section-intro.split .section-kicker{
+  margin-bottom: 0;
+}
+
+@media (max-width: 780px){
+  .section-intro.split{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+}
