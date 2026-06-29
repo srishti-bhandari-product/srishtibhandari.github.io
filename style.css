@@ -1494,3 +1494,25 @@ img{
     gap: 10px;
   }
 }
+/* Selected Work proof chips */
+.work-proof{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.work-proof span{
+  color: rgba(98, 91, 82, 0.92);
+  background: rgba(247, 241, 232, 0.76);
+  border: 1px solid rgba(36, 30, 24, 0.08);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.work-panel .text-link{
+  margin-top: 28px;
+}
