@@ -1516,3 +1516,34 @@ img{
 .work-panel .text-link{
   margin-top: 28px;
 }
+/* Watchr image mock */
+.watchr-image-wrap{
+  position: relative;
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 20% 18%, rgba(176, 122, 67, 0.16), transparent 18rem),
+    rgba(255, 250, 243, 0.62);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.watchr-image-wrap::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(145deg, rgba(255, 250, 243, 0.18), rgba(255, 250, 243, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.watchr-image{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
